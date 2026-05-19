@@ -8,6 +8,9 @@ const els = {
   categoryCount: document.getElementById("category-count"),
   artworkCount: document.getElementById("artwork-count"),
   instagramLink: document.getElementById("instagram-link"),
+  whatsappLink: document.getElementById("whatsapp-link"),
+  whatsappNumber: document.getElementById("whatsapp-number"),
+  backToTop: document.getElementById("back-to-top"),
   lightbox: document.getElementById("lightbox"),
   lightboxImg: document.getElementById("lightbox-img"),
   lightboxTitle: document.getElementById("lightbox-title"),
@@ -299,11 +302,30 @@ function setupInstagram() {
   els.instagramLink.setAttribute("aria-label", `Open Instagram: ${SITE_CONFIG.instagramUrl}`);
 }
 
+function setupWhatsApp() {
+  if (!els.whatsappLink || !els.whatsappNumber) return;
+  els.whatsappLink.href = SITE_CONFIG.whatsappUrl;
+  els.whatsappNumber.textContent = SITE_CONFIG.whatsappNumber;
+  els.whatsappLink.setAttribute("aria-label", `Message on WhatsApp: ${SITE_CONFIG.whatsappNumber}`);
+}
+
+function setupBackToTop() {
+  if (!els.backToTop) return;
+  els.backToTop.addEventListener("click", (e) => {
+    e.preventDefault();
+    closeLightbox();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.history.replaceState({}, "", "#home");
+  });
+}
+
 function boot() {
   els.year.textContent = String(new Date().getFullYear());
   renderCounts();
   renderFeaturedStrip();
   setupInstagram();
+  setupWhatsApp();
+  setupBackToTop();
   setupLightboxA11y();
 
   const initialCategory = getCategoryFromUrl() || "All";
@@ -311,4 +333,3 @@ function boot() {
 }
 
 boot();
-

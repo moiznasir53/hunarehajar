@@ -1,5 +1,7 @@
 export const SITE_CONFIG = {
-  instagramUrl: "https://instagram.com/yourhandle",
+  instagramUrl: "https://instagram.com/hunarehajar",
+  whatsappNumber: "+918097058352",
+  whatsappUrl: "https://wa.me/918097058352",
 };
 
 export const CATEGORIES = [
