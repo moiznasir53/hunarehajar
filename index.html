@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f3efe6" />
+    <title>Hunar-e-Hajar</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%231e2a4a' d='M32 6c8.5 0 16.5 3.3 22.5 9.3S63.8 29.3 63.8 37.8c0 8.5-3.3 16.5-9.3 22.5S40.5 69.6 32 69.6 15.5 66.3 9.5 60.3 0.2 46.3 0.2 37.8c0-8.5 3.3-16.5 9.3-22.5S23.5 6 32 6Z'/%3E%3Cpath fill='%23f3efe6' d='M18 43c4.8-10.6 12-16 21.5-16 6.2 0 10.7 2.1 13.5 6.3-4.2 0.7-7.5 2-9.9 4-2.4 2-4.7 5.1-6.8 9.2-4.5 0.6-9.5 0-18.3-3.5Z'/%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./site/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="page-grain" aria-hidden="true"></div>
+    <div class="page-glow" aria-hidden="true"></div>
+
+    <header class="topbar" id="home">
+      <div class="topbar__inner">
+        <a class="brand" href="#home" aria-label="Hunar-e-Hajar Home">
+          <span class="brand__mark" aria-hidden="true"></span>
+          <span class="brand__name">Hunar-e-Hajar</span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <a class="nav__link" href="#gallery">Gallery</a>
+          <a class="nav__link" href="#about">About</a>
+          <a class="nav__link" href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__inner">
+          <div class="hero__text">
+            <p class="kicker">An artist’s portfolio</p>
+            <h1 class="hero__title" id="hero-title">Hunar-e-Hajar</h1>
+            <p class="hero__subtitle">
+              A quiet gallery of color, craft, and patience—paintings gathered as small
+              windows into worlds.
+            </p>
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="#gallery">Explore gallery</a>
+              <a class="btn btn--ghost" href="#contact">Enquire</a>
+            </div>
+            <div class="hero__meta">
+              <div class="meta-chip">
+                <span class="meta-chip__label">Categories</span>
+                <span class="meta-chip__value" id="category-count">—</span>
+              </div>
+              <div class="meta-chip">
+                <span class="meta-chip__label">Artworks</span>
+                <span class="meta-chip__value" id="artwork-count">—</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero__frame" aria-label="Featured artworks">
+            <div class="featured" id="featured-strip"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="gallery" aria-labelledby="gallery-title">
+        <div class="section__head">
+          <h2 class="section__title" id="gallery-title">Gallery</h2>
+          <p class="section__subtitle">
+            Filter by mood and subject. Tap an artwork to view it in full.
+          </p>
+        </div>
+        <div class="filters" id="filters" role="tablist" aria-label="Gallery filters"></div>
+        <div class="grid" id="gallery-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="section section--split" id="about" aria-labelledby="about-title">
+        <div class="section__head">
+          <h2 class="section__title" id="about-title">About</h2>
+          <p class="section__subtitle">A small note from the studio.</p>
+        </div>
+        <div class="about">
+          <div class="about__card">
+            <h3 class="about__title">Artist statement</h3>
+            <p class="about__text">
+              Hunar-e-Hajar is a practice of slow looking—building atmosphere through
+              layered pigments, light, and detail. Each piece begins with a feeling, then
+              becomes a place to return to.
+            </p>
+            <p class="about__text">
+              The collection moves between still life, landscapes, nature studies, and
+              heritage-inspired architecture—each category a different kind of calm.
+            </p>
+          </div>
+          <div class="about__card about__card--quote">
+            <p class="pull-quote">
+              “I paint what I want to live inside—soft edges, honest color, and stories
+              that don’t rush.”
+            </p>
+            <div class="sig">— Hunar-e-Hajar</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact" aria-labelledby="contact-title">
+        <div class="section__head">
+          <h2 class="section__title" id="contact-title">Contact</h2>
+          <p class="section__subtitle">
+            For commissions, purchases, or collaborations—send a message.
+          </p>
+        </div>
+
+        <div class="contact">
+          <div class="contact__card">
+            <div class="contact__title">Instagram</div>
+            <p class="contact__text">
+              Reach out with a short note and the artwork name that caught your eye.
+            </p>
+            <a class="btn btn--primary" id="instagram-link" href="#" target="_blank" rel="noreferrer">
+              Open Instagram
+            </a>
+          </div>
+          <div class="contact__card contact__card--hint">
+            <div class="contact__hint-title">Tip</div>
+            <p class="contact__text">
+              You can update the Instagram link and artwork details from a single config
+              file.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__left">
+          <div class="footer__brand">Hunar-e-Hajar</div>
+          <div class="footer__small">© <span id="year"></span> All rights reserved.</div>
+        </div>
+        <div class="footer__right">
+          <a class="footer__link" href="#home">Back to top</a>
+        </div>
+      </div>
+    </footer>
+
+    <dialog class="lightbox" id="lightbox" aria-label="Artwork viewer">
+      <div class="lightbox__inner">
+        <button class="icon-btn lightbox__close" type="button" id="lightbox-close" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+
+        <div class="lightbox__media">
+          <img class="lightbox__img" id="lightbox-img" alt="" />
+        </div>
+
+        <div class="lightbox__panel">
+          <div class="lightbox__title" id="lightbox-title"></div>
+          <div class="lightbox__meta">
+            <span class="badge" id="lightbox-category"></span>
+          </div>
+          <div class="lightbox__desc" id="lightbox-desc"></div>
+          <div class="lightbox__nav">
+            <button class="btn btn--ghost" type="button" id="lightbox-prev">Previous</button>
+            <button class="btn btn--ghost" type="button" id="lightbox-next">Next</button>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
+    <script type="module" src="./site/app.js"></script>
+  </body>
+</html>
+
